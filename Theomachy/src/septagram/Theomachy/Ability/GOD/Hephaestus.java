@@ -23,15 +23,15 @@ public class Hephaestus extends Ability
 	private final int coolTime0=10;
 	private final int material=4;
 	private final int stack0=1;
-	private final static String[] des= {"불의 신입니다.",
-			   "기본적으로 화염데미지를 받지 않으며 용암을 자유자재로 다룰 수 있습니다.",
-			   "일반능력을 통해 해당 지역에 용암을 놓을 수 있습니다.",
-			   "놓은 용암은 2초 뒤 사라집니다.",
-			   "물에 들어갈 시 데미지를 입습니다."};
+	private final static String[] des= {
+				"He is god of blacksmith.",
+			   "Basically, you don't get damage by fire.",
+			   "By using ability, you can place lava which remove after few time.",
+			   "Don't enter to water, or you will get damage."};
 	
 	public Hephaestus(String playerName)
 	{
-		super(playerName,"헤파이토스", 9, true, true, false, des);
+		super(playerName,"Hephaestus", 9, true, true, false, des);
 		Theomachy.log.info(playerName+abilityName);
 		
 		this.cool1=coolTime0;

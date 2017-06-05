@@ -25,9 +25,9 @@ import septagram.Theomachy.Utility.Skill;
 public class Aeolus extends Ability{
 	
 	private final static String[] des= {"He is god of storm and wind.",
-			"Normal ability can have your team memebers who are in near by you",
+			"Normal ability can have your teammates who are in near by you",
 			"to get some fresh air, and present SPEED and REGERATION to them.",
-			"High ability can have enemy team memebers who are in near by you",
+			"High ability can have enemy teammates who are in near by you",
 			"present WEAKNESS and SLOW."};
 	
 	public Aeolus(String playerName)

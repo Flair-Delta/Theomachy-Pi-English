@@ -25,16 +25,17 @@ public class Poseidon extends Ability
 	private final int coolTime0=240;
 	private final int material=4;
 	private final int stack0=5;
-	private final static String[] des= {"물의 신입니다.",
-			   "물 속에 있을 때 일정확률로 모든 피격을 33% 확률로 회피합니다.",
-			   "물 속에서 나온 직후 7초 동안 효과가 지속됩니다.",
-			   "블레이즈 로드를 이용한 능력으로 자신의 앞으로 물을 생성하며",
-			   "이후 7초 동안 물에 있는 플레이어는 모두 날려버립니다.",
-			   "물벽은 조약돌을 뚫을 수 있습니다."};
+	private final static String[] des= {
+				"He is god of sea and water.",
+			   "If you are in water, you can avoid attack by 10% chance.",
+			   "Above passive ability will continue after leaving water by 7 sec.",
+			   "By using ability, you can spawn water-wall.",
+			   "During 7 sec, people who are in water-wall will be bounced.",
+			   "Water-wall can destroy cobblestones."};
 	
 	public Poseidon(String playerName)
 	{
-		super(playerName,"포세이돈", 2, true, true, false, des);
+		super(playerName,"Poseidon", 2, true, true, false, des);
 		Theomachy.log.info(playerName+abilityName);
 		
 		this.cool1=coolTime0;
@@ -75,7 +76,7 @@ public class Poseidon extends Ability
 				w.start();
 			}
 			else
-				player.sendMessage("스킬의 지속시간이 끝나지 않아 사용할 수 없습니다.");
+				player.sendMessage("You can't use it beacuse sustainment time of skill isn't finished.");
 		}
 	}
 	class KnockBack extends Thread
@@ -165,7 +166,7 @@ public class Poseidon extends Ability
 			if (rn == 0)
 			{
 				event.setCancelled(true);
-				player.sendMessage("회피");
+				player.sendMessage("AVOIDING!!");
 			}
 		}
 	}

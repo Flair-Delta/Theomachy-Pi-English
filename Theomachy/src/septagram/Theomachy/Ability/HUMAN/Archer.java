@@ -22,13 +22,14 @@ public class Archer extends Ability
 	private final int material=4;
 	private final int stack1=7;
 	private final int stack2=15;
-	private final static String[] des= {"궁수입니다.",
-			   "활 공격 데미지가 1.4배로 상승합니다.",
-			   "좌클릭으로 화살을 얻을 수 있으며 우클릭으로 활을 얻을 수 있습니다."};
+	private final static String[] des= {
+			   "Damage of sniping is increased 140%.",
+			   "You can make arrow by using normal ability.",
+			   "You can also make bow by using high ability."};
 	
 	public Archer(String playerName)
 	{
-		super(playerName,"아처", 101, true, true, false, des);
+		super(playerName,"Archer", 101, true, true, false, des);
 		Theomachy.log.info(playerName+abilityName);
 		this.cool1=coolTime1;
 		this.cool2=coolTime2;

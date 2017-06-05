@@ -19,7 +19,8 @@ import septagram.Theomachy.Utility.Skill;
 
 public class Bee extends Ability{
 
-	public final static String[] des= {"벌들의 제왕입니다.",
+	public final static String[] des= {
+			"벌들의 제왕입니다.",
 			"자신을 공격해 온 적에게 75%의 확률로 독을 안겨줍니다.",
 			"폼산을 이용해서 상대를 유혹할 수도 있습니다.",
 			"능력 사용 시 목표로 지정해 둔 상대를 자신의 위치로 끌어옵니다.",

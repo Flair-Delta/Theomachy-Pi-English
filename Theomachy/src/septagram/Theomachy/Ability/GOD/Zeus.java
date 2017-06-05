@@ -25,15 +25,15 @@ public class Zeus extends Ability
 	private final int material=4;
 	private final int stack1=1;
 	private final int stack2=5;
-	private final static String[] des= {"신들의 왕입니다.",
-			   "번개를 사용하며 블레이즈 로드를 들었을때 발동 시킬 수 있습니다.",
-			   "패시브 능력으로 번개와 폭발 데미지를 받지 않습니다.",
-			   "일반능력은 타겟지역(거리제한 50)에 번개를 떨어뜨리며",
-			   "고급능력은 타겟지역(거리제한 30)에 대량의 번개를 떨어뜨립니다."};
+	private final static String[] des= {
+				"He is the king of gods.",
+			   "By passive ability, you don't get explosion of lightning damage..",
+			   "By normal ability, you can strike lightning at target location.",
+			   "By high ability, you can strike mass lightning at target location."};
 	
 	public Zeus(String playerName)
 	{
-		super(playerName,"제우스", 1, true, true, false, des);
+		super(playerName,"Zeus", 1, true, true, false, des);
 		Theomachy.log.info(playerName+abilityName);
 		
 		this.cool1=coolTime1;

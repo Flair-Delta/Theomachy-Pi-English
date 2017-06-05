@@ -28,7 +28,8 @@ public class Artemis extends Ability
 	private final int stack2=15;
 	private final static String[] des= {
 				"She is goddess of hunting and moon.",
-			   "Normal ability can make arrow, high ability can make bow.",
+			   "By using normal ability, you can make arrow.",
+			   "By using high ability, you can make bow.",
 			   "If you snipe at someone, he will die at once by 15% chance."};
 	
 	public Artemis(String playerName)

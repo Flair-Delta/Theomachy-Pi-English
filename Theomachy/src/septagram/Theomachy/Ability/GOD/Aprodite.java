@@ -20,7 +20,7 @@ public class Aprodite extends Ability{
 	private final static String[] des= {
 				"She is goddess of beauty.",
 			   "Your ability can grap others.",
-			   "If you use ability, enemy team memebers who are",
+			   "By using ability, enemy teammates who are",
 			   "in near by you are grabbed to your location.",
 			   "When using it, If there is no block bloew you or ",
 			   "you are sneaking, you can use it."};

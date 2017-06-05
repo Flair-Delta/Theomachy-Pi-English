@@ -24,7 +24,7 @@ public class Asclepius extends Ability
 	private final static String[] des= {
 				"He is god of medical care.",
 			   "Normal ability can have you regerate." ,
-			   "High ability can have your team memebers",
+			   "High ability can have your teammates",
 			   "who are in near by you regerate(You are excluded.)."};
 	
 	public Asclepius(String playerName)

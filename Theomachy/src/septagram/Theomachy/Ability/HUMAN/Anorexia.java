@@ -7,12 +7,12 @@ import septagram.Theomachy.DB.GameData;
 
 public class Anorexia extends Ability{
 
-	private final static String[] des= { "신경성 식욕부진증이라고도 합니다.",
-			"배고픔이 절반으로 유지됩니다."
+	private final static String[] des= { 
+			"Your food level will be always keep half."
 	};
 	
 	public Anorexia(String playerName) {
-		super(playerName, "거식증", 120, false, true, false, des);
+		super(playerName, "Anorexia", 120, false, true, false, des);
 		
 		this.rank=2;
 

@@ -1,8 +1,5 @@
 package septagram.Theomachy.Ability.GOD;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -19,9 +16,10 @@ import septagram.Theomachy.Utility.Skill;
 
 public class Morpious extends Ability{
 
-	private final static String[] des= {"잠의 신입니다.",
-			"일반능력으로 목표 지정한 적을 1분간 잠들게 합니다.",
-			"목표 지정: /x <대상>"};
+	private final static String[] des= {
+			"He is god of sleeping.",
+			"By using ability, target will be fell asleep by you.",
+			"How to target: /x <TARGET>"};
  	
 	private final int coolTime1=180;
 	private final int stack1=32;
@@ -29,7 +27,7 @@ public class Morpious extends Ability{
 	private String abilitytarget;
 	
 	public Morpious(String playerName) {
-		super(playerName, "모르피우스", 15, true, false, false, des);
+		super(playerName, "Morpious", 15, true, false, false, des);
 		
 		this.rank=3;
 		
@@ -60,27 +58,25 @@ public class Morpious extends Ability{
 			if(team[0]!=team[1]){
 			if(abilitytarget!=null){
 				if(player.getName().equals(abilitytarget)){
-					player.sendMessage(ChatColor.RED+"목표는 본인이 아니어야 합니다.");
+					player.sendMessage(ChatColor.RED+"Ouch. Target must not yourself.");
 				}
 				
 				else{
 					Player target = GameData.OnlinePlayer.get(abilitytarget);
 					Skill.Use(player, 4, stack1, 1, coolTime1);
-					player.sendMessage(ChatColor.GRAY+"목표를 잠재웠습니다!");
-					target.sendMessage(ChatColor.GRAY+"착한 어른이는 일찍 자고 일찍 일어나야 해요~");
+					player.sendMessage(ChatColor.GRAY+"Target was fell asleep!");
+					target.sendMessage(ChatColor.GRAY+"You have to go to bed ealry~");
 					target.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 1200,0), true);
 					target.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 1200, 3), true);
-					Timer t = new Timer();
-					t.schedule(new M(player, target), 57000, 1000);
 				}
 				
 			}
 			else{
-				player.sendMessage("목표를 설정해주십시오. (목표 설정법: /x <목표>)");
+				player.sendMessage("Please target. (How to target: /x <TARGET>)");
 			}
 			}
 			else{
-				player.sendMessage(ChatColor.GRAY+"본인의 팀이므로 잠을 재울 수 없습니다!");
+				player.sendMessage(ChatColor.GRAY+"Target is your team! You can't use ability to him.");
 			}
 		}
 	}
@@ -90,36 +86,9 @@ public class Morpious extends Ability{
 			if (!playerName.equals(targetName))
 			{
 				this.abilitytarget = targetName;
-				sender.sendMessage("타겟을 등록했습니다.   "+ChatColor.GREEN+targetName);
+				sender.sendMessage("TARGET.   "+ChatColor.GREEN+targetName);
 			}
 			else
-				sender.sendMessage("자기 자신을 목표로 등록 할 수 없습니다.");
+				sender.sendMessage("Ouch. Target must not yourself.");
 	}
-}
-
-class M extends TimerTask{
-
-	private int count=3;
-	private Player p;
-	private Player t;
-	
-	public M (Player p, Player t){
-		this.p=p;
-		this.t=t;
-	}
-	
-	@Override
-	public void run() {
-		if(count==0){
-			t.sendMessage("잠에서 깨어났습니다!");
-			p.sendMessage("마법을 걸었던 상대가 잠에서 깨어났습니다!");
-			this.cancel();
-		}
-		else{
-			t.sendMessage(ChatColor.DARK_AQUA+"잠에서 깨어나기 전까지 "+ChatColor.WHITE+count+ChatColor.DARK_AQUA+"초 전입니다.");
-			p.sendMessage(ChatColor.DARK_AQUA+"상대가 잠에서 깨어나기 전까지 "+ChatColor.WHITE+count+ChatColor.DARK_AQUA+"초 전입니다.");
-		}
-		count--;
-	}
-
 }

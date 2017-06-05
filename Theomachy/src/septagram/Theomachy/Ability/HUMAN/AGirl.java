@@ -15,13 +15,13 @@ import septagram.Theomachy.Utility.Skill;
 
 public class AGirl extends Ability{
 
-	private final static String[] des= {"귀여움으로 상대를 굶어죽이는 능력입니다.",
-											  "블레이즈 로드 좌클릭 시 주변 5칸 이내의",
-											  "플레이어를 자신의 앞으로 끌어옵니다.",
-											  "끌려 온 플레이어들의 배고픔 지수는 0이 됩니다."};
+	private final static String[] des= {
+												"This ability is killing by starve sb to death",
+											  "By using ability, enemy teammates who is in near by you",
+											  "will be grabbed. Their food level will be 0."};
 	
 	public AGirl(String playerName) {
-		super(playerName, "안락소녀", 127, true, false, false, des);
+		super(playerName, "CharmingGirl", 127, true, false, false, des);
 		
 		this.rank= 3;
 		this.cool1=60;
@@ -50,7 +50,7 @@ public class AGirl extends Ability{
 				e.teleport(player);
 				e.setFoodLevel(0);
 				e.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 2, 200));
-				e.sendMessage(ChatColor.GREEN+"안락소녀"+ChatColor.WHITE+"에게 이끌려 갑니다!");
+				e.sendMessage(ChatColor.WHITE+"You are grabbed by "+ChatColor.GREEN+"Charming Girl!!");
 			}
 		}
 	}

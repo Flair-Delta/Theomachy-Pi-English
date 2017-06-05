@@ -22,15 +22,16 @@ public class Hermes extends Ability
 	private final int coolTime0=60;
 	private final int material=4;
 	private final int stack0=2;
-	private final static String[] des= {"여행자의 신입니다.",
-			   "기본적으로 이동속도가 빠르며 블레이즈 로드를",
-			   "사용한 능력을 통해 비행 할 수 있습니다.",
-			   "비행 시 점프하면서 쓰시면 바로 날 수 있습니다." ,
-			   "비행 중에는 낙하 데미지를 받지 않습니다."};
+	private final static String[] des= {
+				"He is god of traveler.",
+			   "Basically, you can move fast.",
+			   "By using ability you can fly during a few time.",
+			   "If you jump when you use it, you can fly right away." ,
+			   "If you are flying, you won't get falling damage."};
 	
 	public Hermes(String playerName)
 	{
-		super(playerName,"헤르메스", 11, true, true, true, des);
+		super(playerName,"Hermes", 11, true, true, true, des);
 		Theomachy.log.info(playerName+abilityName);
 		
 		this.cool1=coolTime0;

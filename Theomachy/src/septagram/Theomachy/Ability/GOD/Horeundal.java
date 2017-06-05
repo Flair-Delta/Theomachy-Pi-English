@@ -15,13 +15,14 @@ import septagram.Theomachy.Utility.Skill;
 
 public class Horeundal extends Ability{
 	
-	private final static String[] des= {"시간과 공간의 신입니다.",
-			"능력 사용 시 위치를 기억하고, 10초 뒤에 기억했던",
-			"위치로 돌아옵니다. 돌아온 뒤 2초간 투명해집니다."};
+	private final static String[] des= {
+			"He is god of time and space.",
+			"By using ability, the location is remembered and",
+			"after 10 sec., you can return there."};
 	
 	public Horeundal(String playerName)
 	{
-		super(playerName,"호른달", 18, true, false, false ,des);
+		super(playerName,"Horeundal", 18, true, false, false ,des);
 		Theomachy.log.info(playerName+abilityName);
 		
 		
@@ -50,7 +51,7 @@ public class Horeundal extends Ability{
 		if(CoolTimeChecker.Check(player, 0)&&PlayerInventory.ItemCheck(player, 4, sta1)){
 			
 			Skill.Use(player, 4, sta1, 0, cool1);
-			player.sendMessage("위치를 기억했습니다! 10초 뒤에 여기로 올 것입니다.");
+			player.sendMessage("The location is remembered!");
 			
 			Timer t=new Timer();
 			t.schedule(new HoreunTimer(player, player.getLocation()), 7000, 1000);

@@ -20,9 +20,9 @@ public class Akasha extends Ability{
 
 	private final static String[] des= {
 			"She is goddess of pain and joy.",
-			"Normal ability can have your team memebers who are in near by you",
+			"Normal ability can have your teammates who are in near by you",
 			"present joy and give SPEED and REGERATION to them, so.",
-			"High ability can have enemy team memebers who are in near by you",
+			"High ability can have enemy teammates who are in near by you",
 			"present CONFUSION and decrease their health."};
 	
 	public Akasha(String playerName)

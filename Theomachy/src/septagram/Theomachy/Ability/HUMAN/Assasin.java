@@ -29,14 +29,15 @@ public class Assasin extends Ability
 	private final int material=4;
 	private final int stack1=0;
 	private final int stack2=1;
-	private final static String[] des= {"민첩한 몸놀림을 가지고있는 능력입니다.",
-			   "점프한 후 능력을 사용하면 현재 보는 방향으로 점프를 한 번 더 할 수 있습니다.",
-			   "좌클릭으로 해당방향으로 점프를 합니다.",
-			   "우클릭으로 주변에 있는 적의 등으로 순간이동 합니다."};
+	private final static String[] des= {
+				"You has agile movement.",
+			   "After jumping, if you use your normal ability, ",
+			   "you can jump one more time.",
+			   "By using high ability, you can teleport to a near player."};
 	
 	public Assasin(String playerName)
 	{
-		super(playerName,"암살자", 108, true, false, false, des);
+		super(playerName,"Assasin", 108, true, false, false, des);
 		Theomachy.log.info(playerName+abilityName);
 		this.cool1=coolTime1;
 		this.cool2=coolTime2;
